@@ -54,7 +54,7 @@ export default function Header() {
   /////// constant functions //////////
   useEffect(() => {
     const GenerateYearsList = (
-      startYear = 2010,
+      startYear = 2020,
       endYear = new Date().toISOString().substring(0, 4)
     ) => {
       let years = [];
@@ -77,34 +77,34 @@ export default function Header() {
   );
 
   return (
-    <div className="bg-green-100 p-4 flex flex-wrap justify-center items-center">
+    <div className="bg-blue-100 p-4 flex flex-wrap justify-center items-center">
       <div
         onClick={() => dispatch(setTickets())}
-        className="bg-green-600 px-4 py-1 rounded text-white m-3 cursor-pointer hover:bg-green-700 transition-all duration-500"
+        className="bg-blue-500 px-4 py-1 rounded text-white text-sm m-3 cursor-pointer hover:bg-blue-400 transition-all duration-500"
       >
         defaulte
       </div>
       <div
         onClick={() => dispatch(setFilterToday())}
-        className="bg-green-600 px-4 py-1 rounded  text-white m-3 cursor-pointer hover:bg-green-700 transition-all duration-500"
+        className="bg-blue-500 px-4 py-1 rounded text-sm text-white m-3 cursor-pointer hover:bg-blue-400 transition-all duration-500"
       >
         aujourd'hui
       </div>
 
-      <div className="bg-green-600 px-4 py-1 rounded text-white m-3 hover:bg-green-700 transition-all duration-500">
-        <span className=" border-r-2 px-2 mr-2">select par jour</span>
+      <div className="bg-blue-500 px-4 py-1 rounded text-white m-3 hover:bg-blue-400 transition-all duration-500">
+        <span className=" border-r-2 px-2 mr-2 text-sm">select par jour</span>
         <input
-          className="bg-green-600 cursor-pointer rounded hover:bg-green-700 transition-all duration-500"
+          className="bg-blue-500 text-sm cursor-pointer rounded hover:bg-blue-400 transition-all duration-500"
           type="date"
           name="day"
           onChange={HadndlFilterbyDay}
         />
       </div>
 
-      <div className="bg-green-600 px-4 py-1 rounded text-white m-3 hover:bg-green-700 transition-all duration-500">
+      <div className="bg-blue-500 px-4 py-1 rounded text-sm text-white m-3 hover:bg-blue-400 transition-all duration-500">
         <span className=" border-r-2 px-2 mr-2">select par moins</span>
         <input
-          className="bg-green-600 rounded text-white cursor-pointer hover:bg-green-700 transition-all duration-500"
+          className="bg-blue-500 rounded text-white cursor-pointer hover:bg-blue-400 transition-all duration-500"
           type="date"
           name="month"
           onChange={handleFilterByMonth}
@@ -114,7 +114,7 @@ export default function Header() {
       <div>
         <select
           onChange={HadndlFilterbyYear}
-          className="bg-green-600 px-4 py-1 rounded text-white m-3 cursor-pointer hover:bg-green-700 transition-all duration-500 outline-green-400 outline-offset-2"
+          className="bg-blue-500 px-4 text-sm py-1 rounded text-white m-3 cursor-pointer hover:bg-blue-400 transition-all duration-500 outline-blue-400 outline-offset-2"
           name="year"
           id="year"
         >
@@ -131,7 +131,7 @@ export default function Header() {
       <div>
         <select
           onChange={HadndleFilterbyStatus}
-          className="bg-green-600 px-4 py-1 rounded text-white m-3 cursor-pointer hover:bg-green-700 transition-all duration-500 outline-green-400 outline-offset-2"
+          className="bg-blue-500 px-4 py-1 text-sm rounded text-white m-3 cursor-pointer hover:bg-blue-400 transition-all duration-500 outline-blue-400 outline-offset-2"
           name="statut"
           id="statut"
         >
@@ -146,7 +146,7 @@ export default function Header() {
       <div>
         <select
           onChange={HadndleFilterbyTechnician}
-          className="bg-green-600 px-4 py-1 rounded text-white mr-2 cursor-pointer hover:bg-green-700 transition-all duration-500 outline-green-400 outline-offset-2"
+          className="bg-blue-500 px-4 py-1 rounded text-sm text-white mr-2 cursor-pointer hover:bg-blue-400 transition-all duration-500 outline-blue-400 outline-offset-2"
           name="technicien"
           id="technicien"
         >

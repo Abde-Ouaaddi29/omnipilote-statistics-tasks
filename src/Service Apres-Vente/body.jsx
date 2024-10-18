@@ -6,20 +6,20 @@ export default function Body() {
   console.log(tickets);
 
   const calculateTicketDuration = (dateOuverture, dateFermeture) => {
-    if (!dateFermeture ) return "-"; 
+    if (!dateFermeture) return "-";
     const ouverture = new Date(dateOuverture);
     const fermeture = new Date(dateFermeture);
     const durationInSeconds = fermeture - ouverture;
 
-    const durationInDays = Math.floor(durationInSeconds / (1000 * 60 * 60 * 24)); 
+    const durationInDays = Math.floor(
+      durationInSeconds / (1000 * 60 * 60)
+    );
     return durationInDays;
   };
 
-
-
   return (
-    <div>
-      <table className="border-2 mx-2 my-4 text-sm text-white bg-gray-500">
+    <div className="overflow-x-auto ">
+      {/* <table className="border-2 mx-2 my-4 text-sm text-white bg-gray-500">
         <thead>
           <tr className="bg-green-700 ">
             <th className="border-2 border-gray-300 p-1">Type</th>
@@ -87,7 +87,10 @@ export default function Body() {
                       {item.dateFermeture ? item.dateFermeture : "-"}
                     </td>
                     <td className="border-2 border-gray-300 p-1 text-center text-sm">
-                       {calculateTicketDuration(item.dateOuverture, item.dateFermeture)}
+                      {calculateTicketDuration(
+                        item.dateOuverture,
+                        item.dateFermeture
+                      )}
                     </td>
                     <td className="border-2 border-gray-300 p-1 text-center text-sm">
                       {item.tauxSLA ? item.tauxSLA : "-"}
@@ -109,7 +112,82 @@ export default function Body() {
             </tr>
           </tbody>
         )}
-      </table>
+      </table> */}
+
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg p-4">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
+          <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
+            <tr>
+              <th scope="col" className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
+                Type
+              </th>
+              <th scope="col" className="px-6 py-3 bg-gray-100">
+                Désignation{" "}
+              </th>
+              <th scope="col" className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
+                N° Série
+              </th>
+              <th scope="col" className="px-6 py-3 bg-gray-100">
+                Statut Ticket
+              </th>
+              <th scope="col" className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
+                Date d'Ouverture
+              </th>
+              <th scope="col" className="px-6 py-3 bg-gray-100">
+                Durée du Ticket(h)
+              </th>
+              <th scope="col" className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
+                Technicien
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {tickets.length > 0 ? (
+              tickets.map((item) => {
+                return (
+                  <>
+                    <tr className=" dark:border-gray-700">
+                      <th
+                        scope="row"
+                        className="px-6 py-4 font-medium text-gray-800 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-700"
+                      >
+                        {item.type}
+                      </th>
+                      <td className="px-6 py-4">{item.numeroTicket}</td>
+                      <td className="px-6 py-4 bg-gray-50 dark:bg-gray-700">
+                        {item.designation}
+                      </td>
+                      <td className="px-6 py-4">{item.statut}</td>
+                      <td className="px-6 py-4 bg-gray-50 dark:bg-gray-700">
+                        {item.dateFermeture ? item.dateFermeture : "-"}
+                      </td>
+                      <td className="px-6 py-4">
+                        {" "}
+                        {calculateTicketDuration(
+                          item.dateOuverture,
+                          item.dateFermeture
+                        )}
+                      </td>
+                      <td className="px-6 py-4 bg-gray-50 dark:bg-gray-700">
+                        {item.technicien}
+                      </td>
+                    </tr>
+                  </>
+                );
+              })
+            ) : (
+              <tr>
+                <td
+                  colSpan="7"
+                  className="text-center p-4  bg-gray-200"
+                >
+                  pas de tickets !
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
