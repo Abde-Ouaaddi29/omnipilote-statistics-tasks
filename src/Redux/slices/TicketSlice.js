@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { tickets  } from '../../API/data';
+import { clients, tickets  } from '../../API/data';
 
 const initialState = {
+  clients:clients ,
   allTickets:tickets ,
   Tickets: tickets,
   filterByToday: new Date().toLocaleDateString('en-CA'),

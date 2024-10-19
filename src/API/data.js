@@ -1,225 +1,194 @@
+export const clients = [
+  { id: "12", name: "ahmed" },
+  { id: "15", name: "lina rosa" },
+  { id: "5", name: "albert jhon" },
+  { id: "10", name: "abdel" },
+  { id: "19", name: "lucie grandi" },
+  { id: "3", name: "jhone week" },
+  { id: "22", name: "saadia" },
+  { id: "24", name: "yassine" },
+  { id: "77", name: "morad" }
+];
+
 export const tickets = [
   {
     type: "Maintenance",
     numeroTicket: "T001",
     numeroSerie: "SN001",
     designation: "Problème d'imprimante",
-    client: "Société A",
-    dateOuverture: "2024-01-01", // Date of creation
-    SLA: 2, // SLA in days
-    dureeAppel: 45, // Call duration in minutes
-    dateAffectation: "2024-01-02", // Date assigned to a technician
+    clientId: "12", // Reference to the client with id 12 (ahmed)
+    dateOuverture: "2024-01-01", 
+    SLA: 2, 
+    dureeAppel: 45,
+    dateAffectation: "2024-01-02", 
     compteurMono: 150,
     compteurCouleur: 30,
-    statut: "Fermé", // Status of the ticket
-    dateFermeture: "2024-01-04", // Date of closure
-    dureeTicket: 3, // Duration in days
+    statut: "Fermé",
+    dateFermeture: "2024-01-04", 
+    dureeTicket: 3, 
     technicien: "Said",
-    tauxSLA: 100,
-    client: {
-      id: "12",
-      name: "ahmed"
-    },
-  
+    tauxSLA: 100
   },
   {
     type: "Réseau",
     numeroTicket: "T002",
     numeroSerie: "SN002",
     designation: "Problème de routeur",
-    client: "Société B",
-    dateOuverture: "2024-10-15",
+    clientId: "15", // Reference to the client with id 15 (lina rosa)
+    dateOuverture: "2024-10-15", 
     SLA: 1,
-    dureeAppel: 30,
-    dateAffectation: "2024-11-05",
+    dureeAppel: 30, 
+    dateAffectation: "2024-11-05", 
     compteurMono: 200,
     compteurCouleur: 50,
-    statut: "Ouvert",
+    statut: "Ouvert", 
     dateFermeture: null,
     dureeTicket: null,
-    technicien: "Ali",
-    tauxSLA: null,
-    client: {
-      id: "15",
-      name: "lina rosa"
-    },
-  
+    technicien: "Ali", 
+    tauxSLA: null
   },
   {
     type: "Logiciel",
     numeroTicket: "T003",
     numeroSerie: "SN003",
     designation: "Mise à jour du logiciel",
-    client: "Société C",
+    clientId: "15", // Reference to the client with id 15 (lina rosa)
     dateOuverture: "2024-01-01",
-    SLA: 3,
-    dureeAppel: 60,
-    dateAffectation: "2024-01-11",
+    SLA: 3, 
+    dureeAppel: 60, 
+    dateAffectation: "2024-01-11", 
     compteurMono: 250,
-    compteurCouleur: 80,
-    statut: "Fermé",
-    dateFermeture: "2024-01-12",
+    compteurCouleur: 80, 
+    statut: "Fermé", 
+    dateFermeture: "2024-01-12", 
     dureeTicket: 2,
     technicien: "Omar",
-    tauxSLA: 100,
-    client: {
-      id: "15",
-      name: "lina rosa"
-    },
+    tauxSLA: 100
   },
   {
     type: "Sécurité",
     numeroTicket: "T004",
     numeroSerie: "SN004",
     designation: "Problème de pare-feu",
-    client: "Société D",
+    clientId: "5", // Reference to the client with id 5 (albert jhon)
     dateOuverture: "2024-01-16",
-    SLA: 2,
-    dureeAppel: 20,
-    dateAffectation: "2024-01-16",
+    SLA: 2, 
+    dureeAppel: 20, 
+    dateAffectation: "2024-01-16", 
     compteurMono: 180,
-    compteurCouleur: 40,
-    statut: "Fermé",
+    compteurCouleur: 40, 
+    statut: "Fermé", 
     dateFermeture: "2024-02-17",
     dureeTicket: 2,
     technicien: "Fatima",
-    tauxSLA: 100,
-    client: {
-      id: "5",
-      name: "albert jhon"
-    },
+    tauxSLA: 100
   },
   {
     type: "Infrastructure",
     numeroTicket: "T005",
     numeroSerie: "SN005",
     designation: "Problème de serveur",
-    client: "Société E",
-    dateOuverture: "2024-10-15",
-    SLA: 5,
-    dureeAppel: 90,
+    clientId: "10", // Reference to the client with id 10 (abdel)
+    dateOuverture: "2024-10-15", 
+    SLA: 5, 
+    dureeAppel: 90, 
     dateAffectation: "2024-01-16",
     compteurMono: 300,
-    compteurCouleur: 60,
-    statut: "Ouvert",
+    compteurCouleur: 60, 
+    statut: "Ouvert", 
     dateFermeture: null,
     dureeTicket: null,
-    technicien: "Hassan",
-    tauxSLA: null,
-    client: {
-      id: "10",
-      name: "abdel"
-    },
+    technicien: "Hassan", 
+    tauxSLA: null
   },
   {
     type: "Matériel",
     numeroTicket: "T006",
     numeroSerie: "SN006",
     designation: "Remplacement de matériel",
-    client: "Société F",
-    dateOuverture: "2023-01-22",
+    clientId: "19", // Reference to the client with id 19 (lucie grandi)
+    dateOuverture: "2023-01-22", 
     SLA: 3,
-    dureeAppel: 50,
-    dateAffectation: "2023-01-23",
+    dureeAppel: 50, 
+    dateAffectation: "2023-01-23", 
     compteurMono: 210,
     compteurCouleur: 55,
-    statut: "Fermé",
-    dateFermeture: "2023-01-30",
+    statut: "Fermé", 
+    dateFermeture: "2023-01-30", 
     dureeTicket: 2,
-    technicien: "Nadia",
-    tauxSLA: 100,
-    client: {
-      id: "19",
-      name: "lucie grandi"
-    },
+    technicien: "Nadia", 
+    tauxSLA: 100
   },
   {
     type: "Assistance",
     numeroTicket: "T007",
     numeroSerie: "SN007",
     designation: "Assistance technique",
-    client: "Société G",
-    dateOuverture: "2023-01-25",
-    SLA: 1,
+    clientId: "3", // Reference to the client with id 3 (jhone week)
+    dateOuverture: "2023-01-25", 
+    SLA: 1, 
     dureeAppel: 30,
     dateAffectation: "2023-01-25",
     compteurMono: 120,
     compteurCouleur: 35,
-    statut: "Fermé",
-    dateFermeture: "2023-01-26",
-    dureeTicket: 1,
+    statut: "Fermé", 
+    dateFermeture: "2023-01-26", 
+    dureeTicket: 1, 
     technicien: "Amine",
-    tauxSLA: 100,
-    client: {
-      id: "3",
-      name: "jhone week"
-    },
+    tauxSLA: 100
   },
   {
     type: "Formation",
     numeroTicket: "T008",
     numeroSerie: "SN008",
     designation: "Formation utilisateur",
-    client: "Société H",
-    dateOuverture: "2024-07-27",
-    SLA: 7,
-    dureeAppel: 120,
+    clientId: "22", // Reference to the client with id 22 (saadia)
+    dateOuverture: "2024-07-27", 
+    SLA: 7, 
+    dureeAppel: 120, 
     dateAffectation: "2024-07-28",
     compteurMono: 300,
-    compteurCouleur: 80,
-    statut: "Ouvert",
+    compteurCouleur: 80, 
+    statut: "Ouvert", 
     dateFermeture: null,
-    dureeTicket: null,
-    technicien: "Zara",
-    tauxSLA: null,
-    client: {
-      id: "22",
-      name: "saadia"
-    },
+    dureeTicket: null, 
+    technicien: "Zara", 
+    tauxSLA: null
   },
   {
     type: "Upgrade",
     numeroTicket: "T009",
     numeroSerie: "SN009",
     designation: "Mise à niveau de l'application",
-    client: "Société I",
-    dateOuverture: "2024-02-01",
-    SLA: 4,
-    dureeAppel: 75,
-    dateAffectation: "2024-03-30",
+    clientId: "24", // Reference to the client with id 24 (yassine)
+    dateOuverture: "2024-02-01", 
+    SLA: 4, 
+    dureeAppel: 75, 
+    dateAffectation: "2024-03-30", 
     compteurMono: 250,
     compteurCouleur: 70,
-    statut: "Fermé",
-    dateFermeture: "2024-02-11",
+    statut: "Fermé", 
+    dateFermeture: "2024-02-11", 
     dureeTicket: 3,
-    technicien: "Samir",
-    tauxSLA: 100,
-    client: {
-      id: "24",
-      name: "yassine"
-    }
+    technicien: "Samir", 
+    tauxSLA: 100
   },
   {
     type: "Installation",
     numeroTicket: "T010",
     numeroSerie: "SN010",
     designation: "Installation de nouveaux équipements",
-    client: "Société J",
-    dateOuverture: "2024-10-16",
-    SLA: 2,
-    dureeAppel: 100,
-    dateAffectation: "2024-05-03",
+    clientId: "77", // Reference to the client with id 77 (morad)
+    dateOuverture: "2024-10-16", 
+    SLA: 2, 
+    dureeAppel: 100, 
+    dateAffectation: "2024-05-03", 
     compteurMono: 220,
-    compteurCouleur: 60,
-    statut: "Ouvert",
+    compteurCouleur: 60, 
+    statut: "Ouvert", 
     dateFermeture: null,
-    dureeTicket: null,
-    technicien: "Rachid",
-    tauxSLA: null,
-    client: {
-      id: "77",
-      name: "morad"
-    },
+    dureeTicket: null, 
+    technicien: "Rachid", 
+    tauxSLA: null
   }
 ];
-
