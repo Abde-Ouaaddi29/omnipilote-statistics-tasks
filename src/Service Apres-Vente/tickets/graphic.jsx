@@ -14,7 +14,7 @@ export default function Graphic() {
   return (
     <div>
       <div className="mt-8">
-        <BarChart width={600} height={300} data={data}>
+        <BarChart width={400} height={300} data={data}>
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />

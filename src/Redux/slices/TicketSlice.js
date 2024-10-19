@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { tickets  } from '../../API/data';
 
 const initialState = {
+  allTickets:tickets ,
   Tickets: tickets,
   filterByToday: new Date().toLocaleDateString('en-CA'),
   filterByStatus: '',
@@ -39,10 +40,9 @@ const TicketSlice = createSlice({
         const yearMonth = `${action.payload.year}-${action.payload.month}`; 
         state.Tickets = tickets.filter(item => item.dateOuverture.substring(0, 7) === yearMonth);
     },
-    setAvgTickets: (state, action) => {
-        state.AVG_TECKETS = ''
-    },
-      
+    // setAvgTickets: (state, action) => {
+    //     state.AVG_TECKETS = ''
+    // },
     setTickets: (state) => {
       state.Tickets = tickets; 
     },

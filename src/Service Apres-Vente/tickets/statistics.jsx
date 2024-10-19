@@ -29,8 +29,8 @@ export default function Statistics() {
   };
 
   return (
-    <div className="my-10 border-b-4 border-gray-200 p-4 flex justify-between  ">
-      <div className="font-thin   ">
+    <div className="my-10 border-b-4 border-gray-200 grid lg:grid-cols-2 grid-cols-1">
+      <div className="font-thin">
         {tickets.length > 0 ? (
           <div>
             <div className="mb-4 font-semibold flex items-center">
@@ -53,7 +53,7 @@ export default function Statistics() {
           </div>
         )}
       </div>
-      <div>
+      <div className="">
         {tickets.length > 0 ? <Graphic/> : ''}
       </div>
     </div>
