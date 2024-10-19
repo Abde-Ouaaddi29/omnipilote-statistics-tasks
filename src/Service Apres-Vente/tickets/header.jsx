@@ -8,7 +8,7 @@ import {
   setFilterYear,
   setFilterYearMonth,
   setTickets,
-} from "../Redux/slices/TicketSlice";
+} from "../../Redux/slices/TicketSlice";
 
 export default function Header() {
   const dispatch = useDispatch();

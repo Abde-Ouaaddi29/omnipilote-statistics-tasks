@@ -181,30 +181,3 @@ export const tickets = [
   }
 ];
 
-
-// Exemple de calcul des statistiques
-
-// const statistiques = {
-//   ticketsCrees: tickets.length,
-//   ticketsFermes: tickets.filter(ticket => ticket.statut === "Fermé").length,
-//   ticketsOuverts: tickets.filter(ticket => ticket.statut === "Ouvert").length,
-//   dureeMoyenneTickets: (
-//     tickets
-//       .filter(ticket => ticket.statut === "Fermé")
-//       .reduce((somme, ticket) => somme + ticket.dureeTicket, 0) /
-//     tickets.filter(ticket => ticket.statut === "Fermé").length
-//   ).toFixed(2),
-//   statistiquesTechnicien: {
-//     "Said": {
-//       interventionsFermees: tickets.filter(ticket => ticket.technicien === "Said" && ticket.statut === "Fermé").length,
-//       dureeMoyenne: (
-//         tickets
-//           .filter(ticket => ticket.technicien === "Said" && ticket.statut === "Fermé")
-//           .reduce((somme, ticket) => somme + ticket.dureeTicket, 0) /
-//         tickets.filter(ticket => ticket.technicien === "Said" && ticket.statut === "Fermé").length
-//       ).toFixed(2)
-//     }
-//   }
-// };
-
-// console.log(statistiques);

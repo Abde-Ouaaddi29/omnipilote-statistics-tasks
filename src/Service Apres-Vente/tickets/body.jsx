@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Graphic from "./graphic";
 
-export default function Body() {
+export default function MainTable() {
   const tickets = useSelector((state) => state.tickets.Tickets);
   console.log(tickets);
 
@@ -114,7 +115,7 @@ export default function Body() {
         )}
       </table> */}
 
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg p-4">
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg ">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
           <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
             <tr>

@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { FcStatistics } from "react-icons/fc";
 import { MdErrorOutline } from "react-icons/md";
+import Graphic from "./graphic";
 
 export default function Statistics() {
   const tickets = useSelector((state) => state.tickets.Tickets);
@@ -28,31 +29,36 @@ export default function Statistics() {
   };
 
   return (
-    <div className="p-4 my-3 font-thin border-l-4 border-gray-200 mx-2">
-      {tickets.length > 0 ? (
-        <div>
-          <div className="mb-4 font-semibold flex items-center">
-            <span>Des statistiques pour ces {tickets.length} tickets </span>
-            <FcStatistics className="ml-2" />
-          </div>
+    <div className="my-10 border-b-4 border-gray-200 p-4 flex justify-between  ">
+      <div className="font-thin   ">
+        {tickets.length > 0 ? (
           <div>
-            Nombre total des tickets :{" "}
-            <span className="font-normal">{tickets.length}</span>
-          </div>
-          <div>
-            Durée moyenne des tickets{" "}
-            {/* <span className="text-sm font-bold text-gray-400">
+            <div className="mb-4 font-semibold flex items-center">
+              <span>Des statistiques pour ces {tickets.length} tickets </span>
+              <FcStatistics className="ml-2" />
+            </div>
+            <div>
+              Nombre total des tickets :{" "}
+              <span className="font-normal">{tickets.length}</span>
+            </div>
+            <div>
+              Durée moyenne des tickets{" "}
+              {/* <span className="text-sm font-bold text-gray-400">
               (Somme des durées / Nbre de tickets)
             </span>{" "} */}
-            : <span className="font-normal">{calculateAvgDuration()} h</span>
+              : <span className="font-normal">{calculateAvgDuration()} h</span>
+            </div>
           </div>
-        </div>
-      ) : (
-        <div className="flex justify-center items-center text-red-500">
-          <span>Aucun ticket disponible pour faire des statistiques</span>
-          <MdErrorOutline className="ml-3" />
-        </div>
-      )}
+        ) : (
+          <div className="flex justify-center items-center text-red-500">
+            <span>Aucun ticket disponible pour faire des statistiques</span>
+            <MdErrorOutline className="ml-3" />
+          </div>
+        )}
+      </div>
+      <div>
+        <Graphic/>
+      </div>
     </div>
   );
 }
