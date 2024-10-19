@@ -15,7 +15,12 @@ export const tickets = [
     dateFermeture: "2024-01-04", // Date of closure
     dureeTicket: 3, // Duration in days
     technicien: "Said",
-    tauxSLA: 100 // SLA percentage met
+    tauxSLA: 100,
+    client: {
+      id: "12",
+      name: "ahmed"
+    },
+  
   },
   {
     type: "Réseau",
@@ -33,7 +38,12 @@ export const tickets = [
     dateFermeture: null,
     dureeTicket: null,
     technicien: "Ali",
-    tauxSLA: null
+    tauxSLA: null,
+    client: {
+      id: "15",
+      name: "lina rosa"
+    },
+  
   },
   {
     type: "Logiciel",
@@ -51,7 +61,11 @@ export const tickets = [
     dateFermeture: "2024-01-12",
     dureeTicket: 2,
     technicien: "Omar",
-    tauxSLA: 100
+    tauxSLA: 100,
+    client: {
+      id: "15",
+      name: "lina rosa"
+    },
   },
   {
     type: "Sécurité",
@@ -69,7 +83,11 @@ export const tickets = [
     dateFermeture: "2024-02-17",
     dureeTicket: 2,
     technicien: "Fatima",
-    tauxSLA: 100
+    tauxSLA: 100,
+    client: {
+      id: "5",
+      name: "albert jhon"
+    },
   },
   {
     type: "Infrastructure",
@@ -87,7 +105,11 @@ export const tickets = [
     dateFermeture: null,
     dureeTicket: null,
     technicien: "Hassan",
-    tauxSLA: null
+    tauxSLA: null,
+    client: {
+      id: "10",
+      name: "abdel"
+    },
   },
   {
     type: "Matériel",
@@ -105,7 +127,11 @@ export const tickets = [
     dateFermeture: "2023-01-30",
     dureeTicket: 2,
     technicien: "Nadia",
-    tauxSLA: 100
+    tauxSLA: 100,
+    client: {
+      id: "19",
+      name: "lucie grandi"
+    },
   },
   {
     type: "Assistance",
@@ -123,7 +149,11 @@ export const tickets = [
     dateFermeture: "2023-01-26",
     dureeTicket: 1,
     technicien: "Amine",
-    tauxSLA: 100
+    tauxSLA: 100,
+    client: {
+      id: "3",
+      name: "jhone week"
+    },
   },
   {
     type: "Formation",
@@ -141,7 +171,11 @@ export const tickets = [
     dateFermeture: null,
     dureeTicket: null,
     technicien: "Zara",
-    tauxSLA: null
+    tauxSLA: null,
+    client: {
+      id: "22",
+      name: "saadia"
+    },
   },
   {
     type: "Upgrade",
@@ -159,7 +193,11 @@ export const tickets = [
     dateFermeture: "2024-02-11",
     dureeTicket: 3,
     technicien: "Samir",
-    tauxSLA: 100
+    tauxSLA: 100,
+    client: {
+      id: "24",
+      name: "yassine"
+    }
   },
   {
     type: "Installation",
@@ -177,7 +215,11 @@ export const tickets = [
     dateFermeture: null,
     dureeTicket: null,
     technicien: "Rachid",
-    tauxSLA: null
+    tauxSLA: null,
+    client: {
+      id: "77",
+      name: "morad"
+    },
   }
 ];
 
