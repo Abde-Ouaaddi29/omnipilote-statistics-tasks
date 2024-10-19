@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./Service Apres-Vente/tickets/header";
 import Statistics from "./Service Apres-Vente/tickets/statistics";
 import MainTable from "./Service Apres-Vente/tickets/body";
+import Tables from "./Service Apres-Vente/produits/tables";
 
 export default function Layoute() {
   const [route, setRoute] = useState(1);
@@ -22,11 +23,7 @@ export default function Layoute() {
 
     if (route === 2) {
       return (
-        <>
-          <div>
-            produits
-          </div>
-        </>
+        <> <Tables/> </>
       );
     }
   };

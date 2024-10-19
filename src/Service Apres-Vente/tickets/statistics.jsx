@@ -43,9 +43,6 @@ export default function Statistics() {
             </div>
             <div>
               Durée moyenne des tickets{" "}
-              {/* <span className="text-sm font-bold text-gray-400">
-              (Somme des durées / Nbre de tickets)
-            </span>{" "} */}
               : <span className="font-normal">{calculateAvgDuration()} h</span>
             </div>
           </div>
@@ -57,7 +54,7 @@ export default function Statistics() {
         )}
       </div>
       <div>
-        <Graphic/>
+        {tickets.length > 0 ? <Graphic/> : ''}
       </div>
     </div>
   );
