@@ -160,7 +160,7 @@ export default function MainTable() {
                       </td>
                       <td className="px-6 py-4">{item.statut}</td>
                       <td className="px-6 py-4 bg-gray-50 dark:bg-gray-700">
-                        {item.dateFermeture ? item.dateFermeture : "-"}
+                        {item.dateOuverture ? item.dateOuverture : "-"}
                       </td>
                       <td className="px-6 py-4">
                         {" "}

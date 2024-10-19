@@ -16,10 +16,10 @@ export default function Header() {
   // const [year, setYear] = useState("");
 
   const tickets = useSelector((state) => state.tickets.Tickets);
-  const filterByYearMonth = useSelector(
-    (state) => state.tickets.filterByYearMonth
-  );
-  console.log("filterByYearMonth", filterByYearMonth);
+  // const filterByYearMonth = useSelector(
+  //   (state) => state.tickets.filterByYearMonth
+  // );
+  // console.log("filterByYearMonth", filterByYearMonth);
 
   const HadndleFilterbyStatus = (e) => {
     dispatch(setFilterStatus(e.target.value));
