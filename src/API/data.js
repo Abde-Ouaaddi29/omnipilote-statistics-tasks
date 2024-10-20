@@ -89,7 +89,7 @@ export const tickets = [
     numeroSerie: "SN005",
     designation: "Problème de serveur",
     clientId: "10", // Reference to the client with id 10 (abdel)
-    dateOuverture: "2024-10-19", 
+    dateOuverture: "2024-10-20", 
     SLA: 5, 
     dureeAppel: 90, 
     dateAffectation: "2024-12-19",
@@ -107,7 +107,7 @@ export const tickets = [
     numeroSerie: "SN006",
     designation: "Remplacement de matériel",
     clientId: "19", 
-    dateOuverture: "2024-10-19", 
+    dateOuverture: "2024-10-20", 
     SLA: 3,
     dureeAppel: 50, 
     dateAffectation: "2023-11-23", 
@@ -125,7 +125,7 @@ export const tickets = [
     numeroSerie: "SN007",
     designation: "Assistance technique",
     clientId: "3", // Reference to the client with id 3 (jhone week)
-    dateOuverture: "2024-10-19", 
+    dateOuverture: "2024-10-20", 
     SLA: 1, 
     dureeAppel: 30,
     dateAffectation: "2023-01-25",
@@ -179,7 +179,7 @@ export const tickets = [
     numeroSerie: "SN010",
     designation: "Installation de nouveaux équipements",
     clientId: "77", // Reference to the client with id 77 (morad)
-    dateOuverture: "2024-10-19", 
+    dateOuverture: "2024-10-20", 
     SLA: 2, 
     dureeAppel: 100, 
     dateAffectation: "2024-10-29", 

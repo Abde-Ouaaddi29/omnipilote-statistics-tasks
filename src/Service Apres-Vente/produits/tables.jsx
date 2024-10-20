@@ -16,6 +16,7 @@ export default function Tables() {
     const overtTickets = tickets.filter(
       (item) => item.statut === "Ouvert" && item.dateOuverture === today
     );
+
     console.log(overtTickets);
 
     const clientsWithovertTickets = clients.filter((client) =>
@@ -24,7 +25,7 @@ export default function Tables() {
 
     return (
       <>
-        <div className="p-2 bg-blue-200 text-sm">
+        <div className="p-2 bg-blue-200 text-sm hover:border border-blue-400 transition-all duration-700">
           <div className="flex justify-between">
             <div className="font-bold">
               Nombre de tickets ouverts par client
@@ -32,7 +33,7 @@ export default function Tables() {
             <div className="bg-blue-400 px-2 py-1 rounded">Aujourd’hui</div>
           </div>
           <div className="mt-4">
-            {clientsWithovertTickets.map((client) => {
+            {overtTickets.length > 0 ? clientsWithovertTickets.map((client) => {
               const ticketCount = overtTickets.filter(
                 (ticket) => ticket.clientId === client.id
               ).length;
@@ -46,7 +47,11 @@ export default function Tables() {
                   <div className="px-4">{ticketCount}</div>
                 </div>
               );
-            })}
+            }) : 
+             <div className="text-center text-gray-600 mt-10">
+               Aucun ticket aujourd'hui.
+             </div>
+            }
           </div>
         </div>
       </>
@@ -66,7 +71,7 @@ export default function Tables() {
 
     return (
       <>
-        <div className="p-2 bg-blue-200 text-sm">
+        <div className="p-2 bg-blue-200 text-sm hover:border border-blue-400 transition-all duration-700">
           <div className="flex justify-between">
             <div className="font-bold">Nombre de tickets Fermés par client</div>
             <div className="bg-blue-400 px-2 py-1 rounded">cette annee</div>
@@ -98,19 +103,25 @@ export default function Tables() {
       const totalTickets = tickets.filter((item) => item.clientId === e);
       console.log(totalTickets);
 
-      const totalDuration = totalTickets.reduce((e, ticket) => e + ticket.dureeTicket,0);
+      const totalDuration = totalTickets.reduce(
+        (e, ticket) => e + ticket.dureeTicket,
+        0
+      );
       const averageDuration = totalDuration / totalTickets.length;
       console.log(averageDuration);
-      
-      if(averageDuration == 0) {
-        return <> {"-"} </>
+
+      if (averageDuration == 0) {
+        return <> {"-"} </>;
       }
 
-      return `${Math.floor(averageDuration)}h ${Math.round((averageDuration % 1) * 60)}m`};
+      return `${Math.floor(averageDuration)}h ${Math.round(
+        (averageDuration % 1) * 60
+      )}m`;
+    };
 
     return (
       <>
-        <div className="p-2 bg-blue-200 text-sm">
+        <div className="p-2 bg-blue-200 text-sm hover:border border-blue-400 transition-all duration-700">
           <div className="flex justify-between">
             <div className="font-bold">
               Durée moyenne d’interventions par client
@@ -125,7 +136,7 @@ export default function Tables() {
                     <div className="px-4">{item.name}</div>
                     <div className="px-4">
                       {/* {tickets.filter(ticket => )} */}
-                      {HandleClient(item.id) || "v"}
+                      {HandleClient(item.id)}
                     </div>
                   </div>
                 </>

@@ -47,7 +47,7 @@ export default function Statistics() {
             </div>
           </div>
         ) : (
-          <div className="flex justify-center items-center text-red-500">
+          <div className="flex justify-center items-center pb-4 text-red-500">
             <span>Aucun ticket disponible pour faire des statistiques</span>
             <MdErrorOutline className="ml-3" />
           </div>
