@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Graphic from "../tickets/graphic";
 
 export default function Tables() {
   const clients = useSelector((state) => state.tickets.clients);
@@ -33,25 +34,27 @@ export default function Tables() {
             <div className="bg-blue-400 px-2 py-1 rounded">Aujourd’hui</div>
           </div>
           <div className="mt-4">
-            {overtTickets.length > 0 ? clientsWithovertTickets.map((client) => {
-              const ticketCount = overtTickets.filter(
-                (ticket) => ticket.clientId === client.id
-              ).length;
+            {overtTickets.length > 0 ? (
+              clientsWithovertTickets.map((client) => {
+                const ticketCount = overtTickets.filter(
+                  (ticket) => ticket.clientId === client.id
+                ).length;
 
-              return (
-                <div
-                  key={client.id}
-                  className="flex justify-between border-b mb-2 py-1"
-                >
-                  <div className="px-4">{client.name}</div>
-                  <div className="px-4">{ticketCount}</div>
-                </div>
-              );
-            }) : 
-             <div className="text-center text-gray-600 mt-10">
-               Aucun ticket aujourd'hui.
-             </div>
-            }
+                return (
+                  <div
+                    key={client.id}
+                    className="flex justify-between border-b mb-2 py-1"
+                  >
+                    <div className="px-4">{client.name}</div>
+                    <div className="px-4">{ticketCount}</div>
+                  </div>
+                );
+              })
+            ) : (
+              <div className="text-center text-gray-600 mt-10">
+                Aucun ticket aujourd'hui.
+              </div>
+            )}
           </div>
         </div>
       </>
@@ -149,15 +152,18 @@ export default function Tables() {
   };
 
   return (
-    <div className="p-4 bg-gray-100">
+    <div className="p-2">
       <div>Table 1</div>
       <div>Table 2</div>
-      <div>Table 3</div>
-      <div className="grid lg:grid-cols-3 xl:lg:grid-cols-3 md:lg:grid-cols-2 grid-cols-1 gap-3">
+      <div className="grid lg:grid-cols-2 xl:lg:grid-cols-2 md:lg:grid-cols-2 grid-cols-1 gap-3 my-6 border-b-4 border-blue-200 py-6">
         <TablePerClient1 />
+        <Graphic />
         <TablePerClient2 />
+        <Graphic />
         <TablePerClient3 />
+        <Graphic />
       </div>
+      <div>Table 4</div>
     </div>
   );
 }
