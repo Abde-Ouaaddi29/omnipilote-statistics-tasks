@@ -1,58 +1,5 @@
 import { technicienStats } from "../../API/data";
 
-export function TechnicienDataTabe({ isTeckeFerme = false }) {
-    return (
-      <>
-        <div className="relative overflow-x-auto">
-          <table className="w-full text-sm text-left rtl:text-right text-gray-500 border ">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-100 ">
-              <tr>
-                <th className="text-center px-6 py-4" colSpan={3}>
-                  Nombre de Tickets fermés par technicien
-                </th>
-              </tr>
-              <tr>
-                <th scope="col" className="px-6 py-3 border">
-                  Technicien
-                </th>
-                <th scope="col" className="px-6 py-3 border">
-                  Ce mois
-                </th>
-                <th scope="col" className="px-6 py-3 border">
-                  Cette année
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {technicienStats &&
-                technicienStats?.map((technicien) => {
-                  return (
-                    <tr className="odd:bg-white border" key={technicien.name}>
-                      <th
-                        scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
-                      >
-                        {technicien.name}
-                      </th>
-                      <td className="px-6 py-4 border">
-                        {isTeckeFerme
-                          ? technicien.ticketsFeremeCeMois
-                          : technicien.moyenneInterventionsCeMois}
-                      </td>
-                      <td className="px-6 py-4 border">
-                        {isTeckeFerme
-                          ? technicien.ticketsFeremeCetteAnnee
-                          : technicien.moyenneInterventionsCetteAnnee}
-                      </td>
-                    </tr>
-                  );
-                })}
-            </tbody>
-          </table>
-        </div>
-      </>
-    );
-  }
   
   export function Table1() {
     return (

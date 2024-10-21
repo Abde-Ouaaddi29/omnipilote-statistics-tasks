@@ -16,7 +16,7 @@ export default function Header() {
   // const [year, setYear] = useState("");
 
   const tickets = useSelector((state) => state.tickets.allTickets);
-  
+
   // const filterByYearMonth = useSelector(
   //   (state) => state.tickets.filterByYearMonth
   // );
