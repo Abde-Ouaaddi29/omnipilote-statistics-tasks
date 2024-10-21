@@ -32,7 +32,7 @@ export const InterventionsTable = () => {
 
   return (
     <div>
-      <div className="bg-blue-200 w-full p-2 mb-4">
+      <div className="bg-blue-200 w-full p-2 mb-4 lg:text-sm xl:text-sm text-[12px]">
         <div className="flex items-center justify-between">
           <h1 className=" font-bold my-4">
             {" "}
@@ -43,19 +43,19 @@ export const InterventionsTable = () => {
         <table className="w-full">
           <thead>
             <tr className="font-bold">
-              <td>Numéro</td>
-              <td>Désignation</td>
-              <td>Client</td>
-              <td>Nombre d’interventions</td>
+              <td className="text-center">Numéro</td>
+              <td className="text-center">Désignation</td>
+              <td className="text-center">Client</td>
+              <td className="text-center">Nombre d’interventions</td>
             </tr>
           </thead>
           <tbody>
             {interventions.map((intervention) => (
               <tr key={intervention.id}>
-                <td>{intervention.id}</td>
-                <td>{intervention.designation}</td>
-                <td>{intervention.client}</td>
-                <td>{intervention.totalInterventions}</td>
+                <td className="text-center ">{intervention.id}</td>
+                <td className="text-center ">{intervention.designation}</td>
+                <td className="text-center">{intervention.client}</td>
+                <td className="text-center ">{intervention.totalInterventions}</td>
               </tr>
             ))}
           </tbody>
@@ -84,7 +84,7 @@ export const HighCountersTable = () => {
 
   return (
     <div>
-      <div className="bg-blue-200 w-full p-2 mb-4">
+      <div className="bg-blue-200 w-full p-2 mb-4 lg:text-sm xl:text-sm text-[12px]">
         <div className="flex items-center justify-between">
           <h1 className="font-bold my-4">
             Liste des compteurs les plus élevés
@@ -94,21 +94,21 @@ export const HighCountersTable = () => {
         <table className="w-full">
           <thead>
             <tr className="font-bold">
-              <td>N° série</td>
-              <td>Désignation</td>
-              <td>Client</td>
-              <td>Compteur mono</td>
-              <td>Compteur couleur</td>
+              <td className="text-center">N° série</td>
+              <td className="text-center">Désignation</td>
+              <td className="text-center">Client</td>
+              <td className="text-center ">Compteur mono</td>
+              <td className="text-center">Compteur couleur</td>
             </tr>
           </thead>
           <tbody>
             {counters.map((counter) => (
               <tr key={counter.id}>
-                <td>{counter.id}</td>
-                <td>{counter.designation}</td>
-                <td>{counter.client}</td>
-                <td>{counter.monoCounter}</td>
-                <td>{counter.couleurCounter}</td>
+                <td className="text-center">{counter.id}</td>
+                <td className="text-center">{counter.designation}</td>
+                <td className="text-center">{counter.client}</td>
+                <td className="text-center">{counter.monoCounter}</td>
+                <td className="text-center">{counter.couleurCounter}</td>
               </tr>
             ))}
           </tbody>
@@ -136,7 +136,7 @@ export const PendingTicketsTable = () => {
     }, []);
 
     return (
-        <div className="bg-blue-200 w-full p-2">
+        <div className="bg-blue-200 w-full p-2 lg:text-sm xl:text-sm text-[12px]">
             <div className="flex items-center justify-between">
                 <h1 className="font-bold my-4">Liste des tickets techniques en souffrance</h1>
                 <span className="bg-blue-300 rounded p-2">cette annee</span>

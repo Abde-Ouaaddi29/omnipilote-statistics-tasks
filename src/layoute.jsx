@@ -93,28 +93,28 @@ export default function Layoute() {
           <span className=" lg:w-4/12 xl:w-4/12 w-8/12 font-bold mr-2">
             Rapport technique quotidien :{" "}
           </span>
-          <div className=" flex flex-wrap">
+          <div className="flex flex-wrap">
             <button
               onClick={() => setRoute(2)}
-              className="py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
+              className=" lg:mb-0 mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
             >
               Rapport 1
             </button>
             <button
               onClick={() => setRoute(3)}
-              className="py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
+              className=" lg:mb-0 mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
             >
               Rapport 2
             </button>
             <button
               onClick={() => setRoute(4)}
-              className="py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
+              className="lg:mb-0 mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
             >
               Rapport 3
             </button>
             <button
               onClick={() => setRoute(5)}
-              className="py-2 px-6 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
+              className="lg:mb-0 mb-2 py-2 px-6 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
             >
               Rapport 4
             </button>
