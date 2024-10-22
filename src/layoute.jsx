@@ -7,7 +7,6 @@ import {
   TablePerClient2,
   TablePerClient3,
 } from "./Service Apres-Vente/produits/table3";
-import Graphic from "./Service Apres-Vente/tickets/graphic";
 import {
   Table1
 } from "./Service Apres-Vente/produits/table1";
@@ -21,7 +20,7 @@ export default function Layoute() {
     if (route === 1) {
       return (
         <>
-          <div>
+          <div className="p-4">
             <Header />
             <Statistics />
             <MainTable />
@@ -32,7 +31,7 @@ export default function Layoute() {
 
     if (route === 2) {
       return (
-        <div className=" border-b-2 border-blue-200 pb-4 mb-6">
+        <div className=" border-b-2 border-blue-200 p-4 mb-6">
           <Table1 />
         </div>
       );
@@ -41,7 +40,7 @@ export default function Layoute() {
     if (route === 3) {
       return (
         <>
-          <div className="border-b-2 border-blue-200 pb-4 mb-6">
+          <div className="border-b-2 border-blue-200 p-4 mb-6">
             <TechnicienDataTabe />
           </div>
         </>
@@ -51,13 +50,13 @@ export default function Layoute() {
     if (route === 4) {
       return (
         <>
-          <div className="grid lg:grid-cols-2 xl:lg:grid-cols-2 md:lg:grid-cols-3 grid-cols-1 gap-3 border-b-2 border-blue-200 pb-4 mb-6">
+          <div className="grid lg:grid-cols-2 xl:lg:grid-cols-2 md:lg:grid-cols-3 grid-cols-1 gap-3 border-b-2 border-blue-200 p-4 mb-6">
             <TablePerClient1 />
-            <Graphic />
+            {/* <Graphic/> */}
             <TablePerClient2 />
-            <Graphic />
+            {/* <Graphic/> */}
             <TablePerClient3 />
-            <Graphic />
+            {/* <Graphic /> */}
           </div>
         </>
       );
@@ -66,7 +65,7 @@ export default function Layoute() {
     if (route === 5) {
       return (
         <>
-          <div className="border-b-2 border-blue-200 pb-4 mb-6">
+          <div className="border-b-2 border-blue-200 p-4 mb-6">
             <InterventionsTable />
             <HighCountersTable />
             <PendingTicketsTable />
@@ -77,23 +76,23 @@ export default function Layoute() {
   };
 
   return (
-    <div className="p-4">
+    <div className="">
       <div className="p-4 bg-gray-100 rounded mb-6">
-        <div className="w-full flex mb-2 ">
-          <span className="w-4/12 font-bold mr-2 ">tableau principale :</span>
+        <div className="w-full mb-2 border-b-2 py-2 ">
+          {/* <span className="w-4/12 font-bold mr-2 ">tableau principale :</span> */}
           <button
             onClick={() => setRoute(1)}
-            className="py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
+            className="py-2 px-6 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
           >
-            tickets
+            Reporting technique general
           </button>
         </div>
 
-        <div className="flex items-center">
-          <span className=" lg:w-4/12 xl:w-4/12 w-8/12 font-bold mr-2">
+        <div className="">
+          <span className=" font-bold">
             Rapport technique quotidien :{" "}
           </span>
-          <div className="flex flex-wrap">
+          <div className="flex mt-3 flex-wrap">
             <button
               onClick={() => setRoute(2)}
               className=" lg:mb-0 mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "

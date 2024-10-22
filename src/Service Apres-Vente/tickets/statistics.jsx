@@ -2,7 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { FcStatistics } from "react-icons/fc";
 import { MdErrorOutline } from "react-icons/md";
-import Graphic from "./graphic";
+import { GraphicGeneral } from "./graphic";
+import { Graphic2 } from "./graohic2";
 
 export default function Statistics() {
   const tickets = useSelector((state) => state.tickets.Tickets);
@@ -29,7 +30,7 @@ export default function Statistics() {
   };
 
   return (
-    <div className="my-10 border-b-4 border-gray-200 grid lg:grid-cols-2 grid-cols-1">
+    <div className="my-10 border-b-4 border-gray-200 ">
       <div className="font-thin">
         {tickets.length > 0 ? (
           <div>
@@ -42,8 +43,8 @@ export default function Statistics() {
               <span className="font-normal">{tickets.length}</span>
             </div>
             <div>
-              Durée moyenne des tickets{" "}
-              : <span className="font-normal">{calculateAvgDuration()} h</span>
+              Durée moyenne des tickets :{" "}
+              <span className="font-normal">{calculateAvgDuration()} h</span>
             </div>
           </div>
         ) : (
@@ -54,7 +55,14 @@ export default function Statistics() {
         )}
       </div>
       <div className="">
-        {tickets.length > 0 ? <Graphic/> : ''}
+        {tickets.length > 0 ? (
+          <div>
+            <GraphicGeneral />
+            <Graphic2 />
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

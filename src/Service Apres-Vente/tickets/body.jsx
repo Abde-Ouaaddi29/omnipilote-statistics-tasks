@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Graphic from "./graphic";
 
 export default function MainTable() {
   const tickets = useSelector((state) => state.tickets.Tickets);
