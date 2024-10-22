@@ -11,6 +11,7 @@ import {
 } from "chart.js";
 import { tickets } from "../../API/data";
 import { format, parseISO } from 'date-fns';
+import { fr } from "date-fns/locale";
 
 ChartJS.register(
   CategoryScale,
@@ -22,18 +23,19 @@ ChartJS.register(
 );
 
 export const Graphic2 = () => {
-  // Helper to group tickets by year
+  // get current year
   const currentYear = new Date().getFullYear();
+  // get tickets of current year
   const thisYearTickets = tickets.filter((ticket) =>
     new Date(ticket.dateOuverture).getFullYear() === currentYear
   );
 
-  // Helper function to get month names
+  // this function allow you to get the months names 
   const getMonthName = (dateString) => {
-    return format(parseISO(dateString), 'MMMM');
+    return format(parseISO(dateString), 'MMMM', { locale: fr });
   };
 
-  // Get total tickets closed and opened this year
+  // Get total tickets fermees and overts this year
   const closedTickets = thisYearTickets.filter(
     (ticket) => ticket.statut === "Fermé"
   );
@@ -49,6 +51,8 @@ export const Graphic2 = () => {
   const openDurations = openTickets.filter(ticket => ticket.dureeTicket)
     .reduce((sum, ticket) => sum + ticket.dureeTicket, 0);
 
+
+  
   const totalTicketsData = {
     labels: ["Fermés", "Ouverts"],
     datasets: [
@@ -73,6 +77,7 @@ export const Graphic2 = () => {
   const months = Array.from(
     new Set(thisYearTickets.map((ticket) => getMonthName(ticket.dateOuverture)))
   );
+  console.log(months)
 
   const monthlyClosedTickets = months.map((month) =>
     closedTickets.filter((ticket) => getMonthName(ticket.dateOuverture) === month).length

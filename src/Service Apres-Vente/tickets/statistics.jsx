@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { FcStatistics } from "react-icons/fc";
 import { MdErrorOutline } from "react-icons/md";
 import { GraphicGeneral } from "./graphic";
-import { Graphic2 } from "./graohic2";
+import { Graphic2 } from "./graphic2";
 
 export default function Statistics() {
   const tickets = useSelector((state) => state.tickets.Tickets);

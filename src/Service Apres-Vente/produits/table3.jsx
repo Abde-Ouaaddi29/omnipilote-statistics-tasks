@@ -99,7 +99,8 @@ export const TablePerClient3 = () => {
   const tickets = useSelector((state) => state.tickets.allTickets);
 
   const HandleClient = (e) => {
-    const totalTickets = tickets.filter((item) => item.clientId === e);
+    const closedTickets = tickets.filter(ticket => ticket.statut === "Fermé" )
+    const totalTickets = closedTickets.filter((item) => item.clientId === e);
     console.log(totalTickets);
 
     const totalDuration = totalTickets.reduce(

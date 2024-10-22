@@ -7,10 +7,12 @@ import {
   TablePerClient2,
   TablePerClient3,
 } from "./Service Apres-Vente/produits/table3";
+import { Table1 } from "./Service Apres-Vente/produits/table1";
 import {
-  Table1
-} from "./Service Apres-Vente/produits/table1";
-import { HighCountersTable, InterventionsTable, PendingTicketsTable } from "./Service Apres-Vente/produits/table4";
+  HighCountersTable,
+  InterventionsTable,
+  PendingTicketsTable,
+} from "./Service Apres-Vente/produits/table4";
 import { TechnicienDataTabe } from "./Service Apres-Vente/produits/table2";
 
 export default function Layoute() {
@@ -89,33 +91,31 @@ export default function Layoute() {
         </div>
 
         <div className="">
-          <span className=" font-bold">
-            Rapport technique quotidien :{" "}
-          </span>
-          <div className="flex mt-3 flex-wrap">
+          <span className=" font-bold">Rapport technique quotidien : </span>
+          <div className=" flex flex-col mt-3 flex-wrap">
             <button
               onClick={() => setRoute(2)}
-              className=" lg:mb-0 mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
+              className="  mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
             >
-              Rapport 1
+              Rapport quotidien des tickets
             </button>
             <button
               onClick={() => setRoute(3)}
-              className=" lg:mb-0 mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
+              className="  mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
             >
-              Rapport 2
+              Rapport mensuel des techniciens
             </button>
             <button
               onClick={() => setRoute(4)}
-              className="lg:mb-0 mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
+              className=" mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
             >
-              Rapport 3
+              Rapport année en cours des clients
             </button>
             <button
               onClick={() => setRoute(5)}
-              className="lg:mb-0 mb-2 py-2 px-6 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
+              className=" mb-2 py-2 px-6 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
             >
-              Rapport 4
+              Rapport annuel des équipements
             </button>
           </div>
         </div>
