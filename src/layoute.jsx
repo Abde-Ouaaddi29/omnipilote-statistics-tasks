@@ -95,19 +95,19 @@ export default function Layoute() {
           <div className=" flex flex-col mt-3 flex-wrap">
             <button
               onClick={() => setRoute(2)}
-              className="  mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
+              className="  mb-2 py-2 px-6  bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
             >
               Rapport quotidien des tickets
             </button>
             <button
               onClick={() => setRoute(3)}
-              className="  mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
+              className="  mb-2 py-2 px-6  bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
             >
               Rapport mensuel des techniciens
             </button>
             <button
               onClick={() => setRoute(4)}
-              className=" mb-2 py-2 px-6 mr-2 bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
+              className=" mb-2 py-2 px-6  bg-blue-400 text-white font-bold tracking-wide hover:bg-transparent hover:border border-blue-400 hover:text-blue-400 "
             >
               Rapport année en cours des clients
             </button>
