@@ -5,17 +5,17 @@ export default function MainTable() {
   const tickets = useSelector((state) => state.tickets.Tickets);
   console.log(tickets);
 
-  const calculateTicketDuration = (dateOuverture, dateFermeture) => {
-    if (!dateFermeture) return "-";
-    const ouverture = new Date(dateOuverture);
-    const fermeture = new Date(dateFermeture);
-    const durationInSeconds = fermeture - ouverture;
+  // const calculateTicketDuration = (dateOuverture, dateFermeture) => {
+  //   if (!dateFermeture) return "-";
+  //   const ouverture = new Date(dateOuverture);
+  //   const fermeture = new Date(dateFermeture);
+  //   const durationInSeconds = fermeture - ouverture;
 
-    const durationInDays = Math.floor(
-      durationInSeconds / (1000 * 60 * 60)
-    );
-    return durationInDays;
-  };
+  //   const durationInDays = Math.floor(
+  //     durationInSeconds / (1000 * 60 * 60)
+  //   );
+  //   return durationInDays;
+  // };
 
   return (
     <div className="overflow-x-auto ">
@@ -163,10 +163,11 @@ export default function MainTable() {
                       </td>
                       <td className="px-6 py-4">
                         {" "}
-                        {calculateTicketDuration(
+                        {/* {calculateTicketDuration(
                           item.dateOuverture,
                           item.dateFermeture
-                        )}
+                        )} */}
+                        {item.dureeTicket}
                       </td>
                       <td className="px-6 py-4 bg-gray-50 dark:bg-gray-700">
                         {item.technicien}

@@ -13,7 +13,7 @@ import {
   InterventionsTable,
   PendingTicketsTable,
 } from "./Service Apres-Vente/produits/table4";
-import { TechnicienDataTabe } from "./Service Apres-Vente/produits/table2";
+import { TechnicienDataTable } from "./Service Apres-Vente/produits/table2";
 
 export default function Layoute() {
   const [route, setRoute] = useState(1);
@@ -43,7 +43,7 @@ export default function Layoute() {
       return (
         <>
           <div className="border-b-2 border-blue-200 p-4 mb-6">
-            <TechnicienDataTabe />
+            <TechnicienDataTable />
           </div>
         </>
       );

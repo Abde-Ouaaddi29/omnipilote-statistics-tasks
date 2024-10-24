@@ -8,27 +8,30 @@ import { Graphic2 } from "./graphic2";
 export default function Statistics() {
   const tickets = useSelector((state) => state.tickets.Tickets);
 
-  const calculateTicketDuration = (dateOuverture, dateFermeture) => {
-    if (!dateFermeture) return 0;
-    const ouverture = new Date(dateOuverture);
-    const fermeture = new Date(dateFermeture);
-    const durationInMilliseconds = fermeture - ouverture;
-    const durationInHours = durationInMilliseconds / (1000 * 60 * 60);
+  // const calculateTicketDuration = (dateOuverture, dateFermeture) => {
+  //   if (!dateFermeture) return 0;
+  //   const ouverture = new Date(dateOuverture);
+  //   const fermeture = new Date(dateFermeture);
+  //   const durationInMilliseconds = fermeture - ouverture;
+  //   const durationInHours = durationInMilliseconds / (1000 * 60 * 60);
+  // console.log('durationInMilliseconds', durationInHours )
 
-    return durationInHours;
-  };
+  //   return durationInHours;
+  // };
 
   const calculateAvgDuration = () => {
     if (tickets.length === 0) return 0;
     const totalDuration = tickets.reduce((acc, ticket) => {
       return (
         acc +
-        calculateTicketDuration(ticket.dateOuverture, ticket.dateFermeture)
+        // calculateTicketDuration(ticket.dateOuverture, ticket.dateFermeture)
+        ticket.dureeTicket
       );
     }, 0);
     return (totalDuration / tickets.length).toFixed(0);
   };
 
+  
   return (
     <div className="my-10 border-b-4 border-gray-200 ">
       <div className="font-thin">
